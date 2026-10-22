@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Ilon O'yini</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Bosh Ekran (Home Screen Menu) -->
+  <div id="homeScreen" class="home-screen">
+    <div class="home-menu">
+      <h1 class="game-title">ILON O'YINI</h1>
+      <button id="resumeBtn" class="main-btn">▶ Davom ettirish</button>
+      <button id="newGameBtn" class="main-btn primary">🎮 Yangi o'yin</button>
+    </div>
+  </div>
+
+  <!-- Chap tepadagi panel (Daraja va Sozlamalar tugmasi) -->
+  <div class="top-left-panel">
+    <div id="levelDisplay">DAROJA: 1</div>
+    <button id="mainSettingsBtn" class="settings-btn">⚙️ Sozlamalar</button>
+  </div>
+
+  <!-- Tepa o'rtada Zashita vaqti -->
+  <div id="topCenterTimer" class="top-center-timer hidden">
+    ⚡ ZASHITA: <span id="shieldSeconds">10</span>s
+  </div>
+
+  <!-- O'ng tepadagi Ochko paneli -->
+  <div class="score-board">
+    <div>Rekord: <span id="highScore">0</span></div>
+    <div>Ochko: <span id="score">0</span></div>
+  </div>
+
+  <!-- Sozlamalar Oynasi (Modal) -->
+  <div id="settingsModal" class="modal hidden">
+    <div class="modal-content">
+      <button id="homeBtn" class="menu-action-btn home-action">🏠 Bosh ekran</button>
+      <button id="restartBtn" class="menu-action-btn restart-action">🔄 Qayta boshlash</button>
+      <hr class="divider">
+      <h2>Qiyinlik Darajasi</h2>
+      <button class="diff-btn active" data-diff="easy">Oson</button>
+      <button class="diff-btn" data-diff="medium">O'rtacha</button>
+      <button class="diff-btn" data-diff="hard">Qiyin</button>
+      <button class="diff-btn danger" data-diff="super">Super Qiyin</button>
+      <button id="closeSettings" class="close-btn">Yopish</button>
+    </div>
+  </div>
+
+  <!-- Mobil Joystik -->
+  <div id="joystickZone" class="joystick-zone">
+    <div id="joystickBase" class="joystick-base">
+      <div id="joystickStick" class="joystick-stick"></div>
+      <div class="arrow up">▲</div>
+      <div class="arrow down">▼</div>
+      <div class="arrow left">◀</div>
+      <div class="arrow right">▶</div>
+    </div>
+  </div>
+
+  <canvas id="gameCanvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
